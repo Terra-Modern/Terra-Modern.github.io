@@ -1,0 +1,4 @@
+Sitemap: https://Terra-Modern.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: Terra-Modern.github.io
