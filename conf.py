@@ -1367,7 +1367,7 @@ GLOBAL_CONTEXT = {
 		"Philip Griffith": {
 			"image": "/images/philip.jpg",
 			"email": BLOG_EMAIL,
-			"bio": "Philip enjoys cooking and playing board games, though not at the same time. He is currently reading <em>The Samurai</em> by Shusaku Endo.",
+			"bio": "Philip enjoys cooking and playing board games, though not at the same time. He is currently reading <em>The Samurai</em> by Sh&#363saku End&#333.",
 			"map": "Tallahassee, FL USA",
 			"social": (
 				"https://github.com/PhilipGriffith",
