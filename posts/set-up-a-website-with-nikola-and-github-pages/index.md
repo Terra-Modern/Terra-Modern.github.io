@@ -1,6 +1,6 @@
 <!--
-.. title: Set up a Github Pages website with Nikola
-.. slug: set-up-a-github-pages-website-with-nikola
+.. title: Set up a website with Nikola and GitHub Pages
+.. slug: set-up-a-website-with-nikola-and-github-pages
 .. date: 2020-11-06 15:33:16 UTC-05:00
 .. tags: Nikola, GitHub
 .. category: Blog
