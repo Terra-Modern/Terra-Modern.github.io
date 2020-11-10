@@ -221,12 +221,14 @@ POSTS = (
     ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
+    ("posts/*.ipynb", "posts", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.md", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
+    ("pages/*.ipynb", "pages", "page.tmpl"),
 )
 
 
@@ -951,7 +953,7 @@ LICENSE = """
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a #href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow" target="_blank">Nikola</a>         {license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
@@ -1362,12 +1364,17 @@ WARN_ABOUT_TAG_METADATA = False
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
+import random
+interest = random.sample(['cooking', 'playing board games', 'burning incense', 'watching the Premier League', 'drinking tea', 'going for walks', 'bouldering', 'running', 'swimming', 'sharing a drink with friends'], k=2)
+music = random.choice(['post-rock', 'ambient music', 'EDM', 'indie folk', 'alternative hip hop', 'minimalism', 'indie pop'])
+book = random.choice([('The Samurai', 'Sh&#363saku End&#333'), ('The Postmodern Condition: A Report on Knowledge', 'Jean-Fran&#231ois Lyotard')])
+flavor = random.choice(['though not necessarily', 'sometimes', 'especially', 'but never'])
 GLOBAL_CONTEXT = {
 	"JIDN": {
 		"Philip Griffith": {
 			"image": "/images/philip.jpg",
 			"email": BLOG_EMAIL,
-			"bio": "Philip enjoys cooking and playing board games, though not at the same time. He is currently reading <em>The Samurai</em> by Sh&#363saku End&#333.",
+			"bio": f"Philip enjoys {interest[0]} and {interest[1]}, {flavor} at the same time. He likes listening to {music} and is currently reading <em>{book[0]}</em> by {book[1]}.",
 			"map": "Tallahassee, FL USA",
 			"social": (
 				"https://github.com/PhilipGriffith",
