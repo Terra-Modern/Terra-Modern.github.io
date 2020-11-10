@@ -48,8 +48,8 @@ If you're unfamiliar with git or SCM, check out the [Git Handbook](https://guide
 
 ### Step 5. Create a GitHub account
 
-You'll need to create a [GitHub account](https://github.com/){:target="_blank"} in order to host a website on GitHub Pages (it's only fair).
+Finally, you'll need to create a [GitHub account](https://github.com/){:target="_blank"} in order to host a website on GitHub Pages (it's only fair).
 
 If you're unfamiliar with GitHub and how it works, check out their [Hello World tutorial](https://guides.github.com/activities/hello-world/){:target="_blank"} that covers the basics. If you're working with a team, you might also find the [GitHub workflow](https://guides.github.com/introduction/flow/){:target="_blank"} useful for keeping your projects in good shape.
 
-Thankfully, Nikola will take care of all of the tricky deployment commands required to sync your site with GitHub Pages. As long as you can push and pull changes between a local repository on your computer and its remote version on your GitHub account, you should be good to go!
+Thankfully, Nikola will take care of all of the tricky deployment commands required to correctly store and sync your site with GitHub Pages. As long as you can push and pull changes between a local repository on your computer and its remote version on your GitHub account, you should be good to go!
