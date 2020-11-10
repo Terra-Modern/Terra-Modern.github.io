@@ -2,8 +2,8 @@
 .. title: Set up a Github Pages website with Nikola
 .. slug: set-up-a-github-pages-website-with-nikola
 .. date: 2020-11-06 15:33:16 UTC-05:00
-.. tags: nikola, github
-.. category: blog
+.. tags: Nikola, GitHub
+.. category: Blog
 .. link: 
 .. description: 
 .. type: text
