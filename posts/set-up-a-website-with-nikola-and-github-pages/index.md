@@ -16,7 +16,7 @@ This post will walk you through the steps required to set up a website built wit
 
 # Yak Shaving! {{% emoji water_buffalo %}} &#129682
 
-*<abbr title="Nota bene">N.B.</abbr> This post assumes some very basic knowledge of the command line. If you need help, you can always [try it the hard way](https://learnpythonthehardway.org/python3/appendixa.html){:target="_blank"}. Regardless, you'll want to do everything within the Anaconda prompt once you have it installed.*
+*<abbr title="Nota bene: 'Note well'">N.B.</abbr> This post assumes some very basic knowledge of the command line. If you need help, you can always [try it the hard way](https://learnpythonthehardway.org/python3/appendixa.html){:target="_blank"}. Regardless, you'll want to do everything within the Anaconda prompt once you have it installed.*
 
 ### Step 1. Install Python 3.x
 
