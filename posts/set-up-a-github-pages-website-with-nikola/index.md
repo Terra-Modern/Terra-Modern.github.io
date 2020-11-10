@@ -26,7 +26,7 @@ Download the 3.x version of Miniconda that's compatible with your computer [here
 
 ### Step 2. Install Nikola
 
-Broadly speaking, there are two major static site generators (SSGs) built with Python: [Pelican](https://docs.getpelican.com/en/latest/index.html){:target="_blank"} and [Nikola](https://getnikola.com/). Terra Modern is built with Nikola, for the simple reason that Nikola supports blog posts written using the [Jupyter Notebook](https://jupyter.org/){:target="_blank"} format, a common way to document and share Python code. Though not all of our posts will be written using Jupyter Notebooks, it's definitely nice to have the ability to work with such a useful application as we plan the future of this site.
+Broadly speaking, there are two major static site generators (SSGs) built with Python: [Pelican](https://docs.getpelican.com/en/latest/index.html){:target="_blank"} and [Nikola](https://getnikola.com/){:target="_blank"}. Terra Modern is built with Nikola, for the simple reason that Nikola supports blog posts written using the [Jupyter Notebook](https://jupyter.org/){:target="_blank"} format, a common way to document and share Python code. Though not all of our posts will be written using Jupyter Notebooks, it's definitely nice to have the ability to work with such a useful application as we plan the future of this site.
 
 Because it's not available within the conda install environment, you'll need to install Nikola and all of its goodies using `pip` (though you can still do this within your Anaconda prompt):
 
