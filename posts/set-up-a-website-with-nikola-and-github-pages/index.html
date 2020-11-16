@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Terra Modern">
 <meta property="og:title" content="Set up a website with Nikola and GitHub Pages">
 <meta property="og:url" content="https://Terra-Modern.github.io/posts/set-up-a-website-with-nikola-and-github-pages/">
-<meta property="og:description" content="This post will walk you through the steps required to set up a website built with Nikola and hosted on Github Pages. Like any project, it begins with yak shaving.
+<meta property="og:description" content="This post will walk you through the steps required to set up a website built with Nikola and hosted on GitHub Pages. Like any project, it begins with yak shaving.
 
 
 Yak Shaving! 🐃 🪒
@@ -64,14 +64,13 @@ N.B. This post ass">
         
 
     </header><section class="e-content entry-content" itemprop="articleBody text"><div>
-<p>This post will walk you through the steps required to set up a website built with Nikola and hosted on Github Pages. Like any project, it begins with yak shaving.</p>
+<p>This post will walk you through the steps required to set up a website built with Nikola and hosted on GitHub Pages. Like any project, it begins with yak shaving.</p>
 <!-- TEASER_END -->
 
 <h2>Yak Shaving! <span class="emoji">🐃</span> 🪒</h2>
 <p><em><abbr title="Nota bene: 'Note well'">N.B.</abbr> This post assumes some very basic knowledge of the command line. If you need help, you can always <a href="https://learnpythonthehardway.org/python3/appendixa.html" target="_blank">learn it the hard way</a>. Regardless, you'll want to do everything within the Anaconda prompt once you have it installed.</em></p>
 <h4>Step 1. Install Python 3.x</h4>
-<p>Terra Modern recommends installing the latest version of Python 3.x using <a href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">Miniconda</a>, the free, minimal installation of <a href="https://www.anaconda.com/" target="_blank">Anaconda</a>. This gives you access to the <em>de facto</em> Python installation environment for data science and spatial analysis, without needing to download the kitchen sink.</p>
-<p>Download the 3.x version of Miniconda that's compatible with your computer <a href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">here</a>.</p>
+<p>Terra Modern recommends installing Python 3.x using <a href="https://docs.conda.io/en/latest/miniconda.html" target="_blank">the latest version of Miniconda that's compatible with your computer</a>. Miniconda is a free, minimal installation of <a href="https://www.anaconda.com/" target="_blank">Anaconda</a> that gives you access to the <em>de facto</em> Python installation environment for data science and spatial analysis, without also needing to download the kitchen sink.</p>
 <h4>Step 2. Install Nikola</h4>
 <p>Broadly speaking, there are two major static site generators (SSGs) built with Python: <a href="https://docs.getpelican.com/en/latest/index.html" target="_blank">Pelican</a> and <a href="https://getnikola.com/" target="_blank">Nikola</a>. Terra Modern is built with Nikola, for the simple reason that Nikola supports blog posts written using the <a href="https://jupyter.org/" target="_blank">Jupyter Notebook</a> format, a common way to document and share Python code. Though not all of our posts will be written using Jupyter Notebooks, it's definitely nice to have the ability to work with such a useful application as we plan the future of this site.</p>
 <p>Because it's not available within the conda install environment, you'll need to install Nikola and all of its goodies using <code>pip</code> (though you can still do this within your Anaconda prompt):</p>
@@ -81,13 +80,63 @@ N.B. This post ass">
 <p><code>conda install -c conda-forge "notebook&gt;=4.0.0" "nbconvert&lt;6.0"</code></p>
 <h4>Step 4. Install git</h4>
 <p>Source control management (SCM) tools are an essential component of modern software development. By incorporating <a href="https://git-scm.com/" target="_blank">git version control</a> into our spatial analysis workflows, Terra Modern is not only better able to work on projects as a team, but we can also leverage Nikola's deployment tools to seamlessly push website changes to our Github Pages.</p>
-<p>Download the version of git that's compatible with your computer <a href="https://git-scm.com/downloads" target="_blank">here</a>.</p>
+<p>To access this functionality, you'll want to <a href="https://git-scm.com/downloads" target="_blank">download the version of git that's compatible with your computer</a>.</p>
 <p>If you're unfamiliar with git or SCM, check out the <a href="https://guides.github.com/introduction/git-handbook/" target="_blank">Git Handbook</a> by GitHub for a great introduction to the topic.</p>
 <h4>Step 5. Create a GitHub account</h4>
 <p>Finally, you'll need to create a <a href="https://github.com/" target="_blank">GitHub account</a> in order to host a website on GitHub Pages (it's only fair).</p>
 <p>If you're unfamiliar with GitHub and how it works, check out their <a href="https://guides.github.com/activities/hello-world/" target="_blank">Hello World tutorial</a> that covers the basics. If you're working with a team, you might also find the <a href="https://guides.github.com/introduction/flow/" target="_blank">GitHub workflow</a> useful for keeping your projects in good shape.</p>
 <p>Thankfully, Nikola will take care of all of the tricky deployment commands required to correctly store and sync your site with GitHub Pages. As long as you can push and pull changes between a local repository on your computer and its remote version on your GitHub account, you should be good to go!</p>
-<h2>Create (or clone) a Nikola site</h2>
+<h2>Create a Nikola site</h2>
+<p><em>N.B. What follows is a pared-down version of the information available on the <a href="https://getnikola.com/getting-started.html#init" target="_blank">Nikola website</a>, so head there if you'd like to learn more about the numerous possibilities available when using the library.</em></p>
+<p>Once you have all of the necessary programs installed, you can create a brand new Nikola site by opening your Anaconda prompt, navigating to the place on your computer where you want to create your site's directory, then entering the following command:</p>
+<p><code>nikola init --demo &lt;type your site's directory name here&gt;</code></p>
+<p>When you include the <code>--demo</code> argument, Nikola will ask you a series of questions to make sure that everything is configured correctly, as well as populate your new site with examples of many of the things it's able to do, which can be really helpful when you're just starting out. However, before you deploy your site, you'll want to <a href="https://getnikola.com/getting-started.html#rm-demo" target="_blank">remove the unused bits that Nikola generates</a>. If you're already familiar with Nikola, or simply want to begin a site from scratch, use this command instead:</p>
+<p><code>nikola init --quiet &lt;type your site's directory name here&gt;</code></p>
+<p>After you initiate your site using one of the commands above, you'll need to tell Nikola to build your site for the first time with this command:</p>
+<p><code>nikola build</code></p>
+<p>This is <a href="https://getnikola.com/handbook.html#why-static" target="_blank">one of the things that separates SSGs</a> from website generators like <a href="https://wordpress.com/" target="_blank">WordPress</a> that create dynamic sites: every time you add a page or make a change to your website, you'll need to tell Nikola to build a new version of the entire site on your own computer before deploying it to a server. Don't worry, though, this isn't as bad as it sounds! Nikola will only rebuild those files that have been affected by your most recent changes, so while the first build may take some time, subsequent builds will usually only need to update a small section of the site.</p>
+<p>Once the site is built, you can view it locally using this command:</p>
+<p><code>nikola serve --browser</code></p>
+<p>If you're anything like me, you'll need to make <em>lots</em> of changes before you're happy with your website and its content. Rather than having to manually build and serve the site every time you need to double-check the final product, Nikola will do this for you when you build the site using either of these commands:</p>
+<p><code>nikola auto --browser</code> or <code>nikola auto -b</code></p>
+<p>Now you can save a change to your site and it will automatically be reflected in your browser window. Just make sure you leave the Anaconda prompt running while you work.</p>
+<h2>Create a post</h2>
+<p>"But wait!" I hear you say. "How do I add content to my website? And why are you so handsome?" To be clear, in what follows we're going to create a blog post, but if you understand the fundamentals, <a href="https://getnikola.com/creating-a-site-not-a-blog-with-nikola.html" target="_blank">building a standard webpage with Nikola isn't much different</a>.</p>
+<p>The process for creating a new post is as simple as:</p>
+<p><code>nikola new_post --format=markdown</code> or <code>nikola new_post -f markdown</code></p>
+<p>Nikola will ask you for the title of your post, then take care of configuring everything else. By default, Nikola will create a post in the <a href="https://docutils.sourceforge.io/rst.html" target="_blank">reStructuredText</a> format, which is used by many Python libraries for documentation. Because I prefer writing in <a href="https://www.markdownguide.org/" target="_blank">Markdown</a>, I need to specify that format when creating a post, otherwise I could leave out the <code>format</code> option. Built to be flexible, <a href="https://getnikola.com/handbook.html#supported-input-formats" target="_blank">Nikola supports Markdown, as well as many other formats</a>, out-of-the-box.</p>
+<p>To make things even easier, adding the argument <code>-e</code> to the <code>new_post</code> command will automatically open the new post in a text editor:</p>
+<p><code>nikola new_post -f markdown -e</code></p>
+<p>To get this functionality in Windows, you'll first need to set a new environment variable named <code>EDITOR</code> whose value is the full path to the executable file of your favorite text editor (Terra Modern recommends using <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>!). You can set an environmental variable from the command line by running the Windows Command Prompt as an administrator, then entering this command:</p>
+<p><code>setx EDITOR "&lt;type the full path to your text editor here&gt;"</code></p>
+<h2>Deploy your site to GitHub Pages</h2>
+<p>Once you've created your website and filled it with amazing content, the only thing left to do is share it with the world. <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines" target="_blank">To let others view your site through their browser, you'll need to store its files on a web server</a>. Enter <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>: by storing your website in a specific way within a git repo (what the cool kids call a "repository"), then uploading that repo to GitHub, GitHub Pages will act as your site's web server. For. Free. Like almost everything else, Nikola will do all of this for you automatically, though it <em>does</em> require a bit of setup first. What follows can also be found <a href="https://getnikola.com/handbook.html#deployment" target="_blank">in the Nikola handbook</a>, so head there if you'd like the nitty-gritty details.</p>
+<h4>Step 1. Create a local git repo</h4>
+<p>You'll first want to initialize a repo in your site's main directory using this command in your Anaconda prompt:</p>
+<p><code>git init .</code></p>
+<p>This will add a <code>.git</code> folder in your main directory that allows git to "see" and back up all the files and directories that make up your site.</p>
+<h4>Step 2. Create a remote GitHub repo</h4>
+<p>Next, log in to your <a href="https://github.com/" target="_blank">GitHub account</a> and create a new repository. To keep things simple, the name of the repo should match the name of your site's main directory. Make sure the repo is public!</p>
+<h4>Step 3. Link your local repo to your remote repo</h4>
+<p>Once that's done, note the full <abbr title="Universal Resource Locator">URL</abbr> of your new remote GitHub repo (it will start with <code>https:</code> and end with <code>.git</code>) and return to your Anaconda prompt. You now need to tell your local repo about the remote one you just created. You can do that with the following command:</p>
+<p><code>git remote add origin &lt;the full URL of your new remote GitHub repo&gt;</code></p>
+<p>Your local repo now knows where to upload the files when Nikola tells it to do so.</p>
+<h4>Step 4. Update your site's configuration file</h4>
+<p>Navigate to your site's main directory, where you'll see its configuration file, <code>conf.py</code>. This Python file contains the settings that Nikola uses when building your site; there are all sorts of options that you can fiddle with, but in this post we only need to change one. Open <code>conf.py</code> in your favorite text editor or <abbr title="Integrated Development Environment">IDE</abbr> and search for the <code>GITHUB_DEPLOY_BRANCH</code> variable.</p>
+<p>If you're creating a user or organization site, you'll want to change this variable to <code>main</code>, <a href="https://github.com/github/renaming" target="_blank">given GitHub's recent changes to how they name the default branch</a>.</p>
+<p>If you're creating a project site, change this variable to <code>gh-pages</code>.</p>
+<p>Nikola now knows how to store your fully built website within a repo so that GitHub Pages will recognize and host it on its web server.</p>
+<h4>Step 5. Deploy your site to GitHub Pages!</h4>
+<p>Finally, deploy your site by uploading it to your GitHub account, using this command:</p>
+<p><code>nikola github_deploy</code></p>
+<p>This command builds your site, commits all the changes to your local git repo in their proper branches, then pushes everything to your remote repo on GitHub. Once GitHub has processed your changes, GitHub Pages will then begin hosting your site. The update process typically doesn't take long, though you will need to refresh your browser to see the changes.</p>
+<p>If you created a user or organization site, your site will be hosted at <code>https://&lt;your repo name&gt;.github.io</code>.</p>
+<p>If you created a project site, your site will be hosted at <code>https://&lt;your GitHub user name&gt;.github.io/&lt;your repo name&gt;/</code>.</p>
+<h2>
+<span class="emoji">🎉</span> Celebrate! <span class="emoji">🎊</span>
+</h2>
+<p>Congratulations! You've successfully set up a website with Nikola and GitHub Pages!</p>
+<p>Now that you have a website up and running, there's much that can be done. Stay tuned for a post on all the tweaks that we've made to build the Terra Modern organization site you see here.</p>
 </div>
     </section><aside class="sharing no-print"><a href="#content" aria-label="Post beginning">
        <i class="fa fa-2x fa-fw fa-arrow-circle-up" aria-hidden="true" title="Post beginning"></i>
@@ -118,7 +167,7 @@ N.B. This post ass">
             <a href="https://www.linkedin.com/in/philip-griffith-3879339b" target="_blank" arial-label="Go to LinkedIn"> <i class="fab fa-fw fa-linkedin" aria-hidden="true" title="LinkedIn"></i></a>
         </span>
      </h3>
-     <p class="bio">Philip enjoys bouldering and cooking, sometimes at the same time. He likes listening to indie folk and is currently reading <em>The Postmodern Condition: A Report on Knowledge</em> by Jean-François Lyotard.</p>
+     <p class="bio">Philip enjoys playing board games and watching the Premier League, sometimes at the same time. He is currently reading <em>The Samurai</em> by Shūsaku Endō.</p>
      <p><i class="fa fa-map-marker-alt"></i> Tallahassee, FL USA</p>
 </footer>
 </div>
