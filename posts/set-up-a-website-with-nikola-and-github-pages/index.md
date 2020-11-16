@@ -88,7 +88,7 @@ The process for creating a new post is as simple as:
 
 `nikola new_post --format=markdown` or `nikola new_post -f markdown`
 
-Nikola will ask you for the title of your post, then take care of configuring everything else. By default, Nikola will create a post in the [reStructuredText](https://docutils.sourceforge.io/rst.html){:target="_blank"} format, which is used by many Python libraries for documentation. Because I prefer writing in [Markdown](https://www.markdownguide.org/){:target="_blank"}, I need to specify that format when creating a post, otherwise I could leave out the `format` option. Built to be flexible, [Nikola supports Markdown, as well as many other formats](https://getnikola.com/handbook.html#supported-input-formats){:target="_blank"}, out-of-the-box.
+Nikola will ask you for the title of your post, then take care of configuring everything else. By default, Nikola will create a post in the [reStructuredText](https://docutils.sourceforge.io/rst.html){:target="_blank"} format, which is used by many Python libraries for documentation. Because I prefer writing in [Markdown](https://www.markdownguide.org/){:target="_blank"}, I need to specify that format when creating a post, otherwise I could leave out the `format` option altogether. Built to be flexible, [Nikola supports Markdown, as well as many other formats](https://getnikola.com/handbook.html#supported-input-formats){:target="_blank"}, out-of-the-box. (You need to do a bit more to support Jupyter Notebooks, but that's for a later post.)
 
 To make things even easier, adding the argument `-e` to the `new_post` command will automatically open the new post in a text editor:
 
@@ -126,9 +126,9 @@ Your local repo now knows where to upload the files when Nikola tells it to do s
 
 Navigate to your site's main directory, where you'll see its configuration file, `conf.py`. This Python file contains the settings that Nikola uses when building your site; there are all sorts of options that you can fiddle with, but in this post we only need to change one. Open `conf.py` in your favorite text editor or <abbr title="Integrated Development Environment">IDE</abbr> and search for the `GITHUB_DEPLOY_BRANCH` variable.
 
-If you're creating a user or organization site, you'll want to change this variable to `main`, [given GitHub's recent changes to how they name the default branch](https://github.com/github/renaming){:target="_blank"}.
+If you're creating a user or organization site, you'll want to change the value of this variable to `main`, [given GitHub's recent changes to how they name the default branch](https://github.com/github/renaming){:target="_blank"}.
 
-If you're creating a project site, change this variable to `gh-pages`.
+If you're creating a project site, change the value of this variable to `gh-pages`.
 
 Nikola now knows how to store your fully built website within a repo so that GitHub Pages will recognize and host it on its web server.
 
@@ -140,9 +140,13 @@ Finally, deploy your site by uploading it to your GitHub account, using this com
 
 This command builds your site, commits all the changes to your local git repo in their proper branches, then pushes everything to your remote repo on GitHub. Once GitHub has processed your changes, GitHub Pages will then begin hosting your site. The update process typically doesn't take long, though you will need to refresh your browser to see the changes.
 
-If you created a user or organization site, your site will be hosted at `https://<your repo name>.github.io`.
+If you created a user or organization site, your site will be hosted at:
 
-If you created a project site, your site will be hosted at `https://<your GitHub user name>.github.io/<your repo name>/`.
+`https://<your repo name>.github.io`
+
+If you created a project site, your site will be hosted at:
+
+`https://<your GitHub user name>.github.io/<your repo name>/`
 
 # {{% emoji party_popper %}} Celebrate! {{% emoji confetti_ball %}}
 

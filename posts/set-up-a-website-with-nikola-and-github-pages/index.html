@@ -104,7 +104,7 @@ N.B. This post ass">
 <p>"But wait!" I hear you say. "How do I add content to my website? And why are you so handsome?" To be clear, in what follows we're going to create a blog post, but if you understand the fundamentals, <a href="https://getnikola.com/creating-a-site-not-a-blog-with-nikola.html" target="_blank">building a standard webpage with Nikola isn't much different</a>.</p>
 <p>The process for creating a new post is as simple as:</p>
 <p><code>nikola new_post --format=markdown</code> or <code>nikola new_post -f markdown</code></p>
-<p>Nikola will ask you for the title of your post, then take care of configuring everything else. By default, Nikola will create a post in the <a href="https://docutils.sourceforge.io/rst.html" target="_blank">reStructuredText</a> format, which is used by many Python libraries for documentation. Because I prefer writing in <a href="https://www.markdownguide.org/" target="_blank">Markdown</a>, I need to specify that format when creating a post, otherwise I could leave out the <code>format</code> option. Built to be flexible, <a href="https://getnikola.com/handbook.html#supported-input-formats" target="_blank">Nikola supports Markdown, as well as many other formats</a>, out-of-the-box.</p>
+<p>Nikola will ask you for the title of your post, then take care of configuring everything else. By default, Nikola will create a post in the <a href="https://docutils.sourceforge.io/rst.html" target="_blank">reStructuredText</a> format, which is used by many Python libraries for documentation. Because I prefer writing in <a href="https://www.markdownguide.org/" target="_blank">Markdown</a>, I need to specify that format when creating a post, otherwise I could leave out the <code>format</code> option altogether. Built to be flexible, <a href="https://getnikola.com/handbook.html#supported-input-formats" target="_blank">Nikola supports Markdown, as well as many other formats</a>, out-of-the-box. (You need to do a bit more to support Jupyter Notebooks, but that's for a later post.)</p>
 <p>To make things even easier, adding the argument <code>-e</code> to the <code>new_post</code> command will automatically open the new post in a text editor:</p>
 <p><code>nikola new_post -f markdown -e</code></p>
 <p>To get this functionality in Windows, you'll first need to set a new environment variable named <code>EDITOR</code> whose value is the full path to the executable file of your favorite text editor (Terra Modern recommends using <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>!). You can set an environmental variable from the command line by running the Windows Command Prompt as an administrator, then entering this command:</p>
@@ -123,15 +123,17 @@ N.B. This post ass">
 <p>Your local repo now knows where to upload the files when Nikola tells it to do so.</p>
 <h4>Step 4. Update your site's configuration file</h4>
 <p>Navigate to your site's main directory, where you'll see its configuration file, <code>conf.py</code>. This Python file contains the settings that Nikola uses when building your site; there are all sorts of options that you can fiddle with, but in this post we only need to change one. Open <code>conf.py</code> in your favorite text editor or <abbr title="Integrated Development Environment">IDE</abbr> and search for the <code>GITHUB_DEPLOY_BRANCH</code> variable.</p>
-<p>If you're creating a user or organization site, you'll want to change this variable to <code>main</code>, <a href="https://github.com/github/renaming" target="_blank">given GitHub's recent changes to how they name the default branch</a>.</p>
-<p>If you're creating a project site, change this variable to <code>gh-pages</code>.</p>
+<p>If you're creating a user or organization site, you'll want to change the value of this variable to <code>main</code>, <a href="https://github.com/github/renaming" target="_blank">given GitHub's recent changes to how they name the default branch</a>.</p>
+<p>If you're creating a project site, change the value of this variable to <code>gh-pages</code>.</p>
 <p>Nikola now knows how to store your fully built website within a repo so that GitHub Pages will recognize and host it on its web server.</p>
 <h4>Step 5. Deploy your site to GitHub Pages!</h4>
 <p>Finally, deploy your site by uploading it to your GitHub account, using this command:</p>
 <p><code>nikola github_deploy</code></p>
 <p>This command builds your site, commits all the changes to your local git repo in their proper branches, then pushes everything to your remote repo on GitHub. Once GitHub has processed your changes, GitHub Pages will then begin hosting your site. The update process typically doesn't take long, though you will need to refresh your browser to see the changes.</p>
-<p>If you created a user or organization site, your site will be hosted at <code>https://&lt;your repo name&gt;.github.io</code>.</p>
-<p>If you created a project site, your site will be hosted at <code>https://&lt;your GitHub user name&gt;.github.io/&lt;your repo name&gt;/</code>.</p>
+<p>If you created a user or organization site, your site will be hosted at:</p>
+<p><code>https://&lt;your repo name&gt;.github.io</code></p>
+<p>If you created a project site, your site will be hosted at:</p>
+<p><code>https://&lt;your GitHub user name&gt;.github.io/&lt;your repo name&gt;/</code></p>
 <h2>
 <span class="emoji">🎉</span> Celebrate! <span class="emoji">🎊</span>
 </h2>
@@ -167,7 +169,7 @@ N.B. This post ass">
             <a href="https://www.linkedin.com/in/philip-griffith-3879339b" target="_blank" arial-label="Go to LinkedIn"> <i class="fab fa-fw fa-linkedin" aria-hidden="true" title="LinkedIn"></i></a>
         </span>
      </h3>
-     <p class="bio">Philip enjoys playing board games and watching the Premier League, sometimes at the same time. He is currently reading <em>The Samurai</em> by Shūsaku Endō.</p>
+     <p class="bio">Philip enjoys sharing a drink with friends and drinking tea, sometimes at the same time. He is currently reading <em>The Postmodern Condition: A Report on Knowledge</em> by Jean-François Lyotard.</p>
      <p><i class="fa fa-map-marker-alt"></i> Tallahassee, FL USA</p>
 </footer>
 </div>
