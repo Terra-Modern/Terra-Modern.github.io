@@ -10,6 +10,10 @@
   <lastmod>2020-11-21T01:06:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://Terra-Modern.github.io/authors/dr-brittany-wood.xml</loc>
+  <lastmod>2020-11-21T02:06:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://Terra-Modern.github.io/authors/mary-grace-mcclellan.xml</loc>
   <lastmod>2020-11-21T01:41:00Z</lastmod>
  </sitemap>
@@ -27,7 +31,7 @@
  </sitemap>
  <sitemap>
   <loc>https://Terra-Modern.github.io/categories/cat_blog.xml</loc>
-  <lastmod>2020-11-21T01:41:00Z</lastmod>
+  <lastmod>2020-11-21T02:06:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://Terra-Modern.github.io/categories/github.xml</loc>
@@ -39,10 +43,10 @@
  </sitemap>
  <sitemap>
   <loc>https://Terra-Modern.github.io/rss.xml</loc>
-  <lastmod>2020-11-21T01:41:00Z</lastmod>
+  <lastmod>2020-11-21T02:06:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://Terra-Modern.github.io/sitemap.xml</loc>
-  <lastmod>2020-11-21T01:41:00Z</lastmod>
+  <lastmod>2020-11-21T02:06:00Z</lastmod>
  </sitemap>
 </sitemapindex>

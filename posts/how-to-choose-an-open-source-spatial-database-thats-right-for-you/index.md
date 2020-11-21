@@ -6,7 +6,7 @@
 .. category: Blog
 .. link:
 .. description:
-.. author: Brittany
+.. author: Dr Brittany Wood
 .. type: text
 -->
 
