@@ -1365,15 +1365,15 @@ WARN_ABOUT_TAG_METADATA = False
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 import random
-interest = random.sample(['cooking', 'playing board games', 'burning incense', 'watching the Premier League', 'drinking tea', 'going for walks', 'bouldering', 'running', 'swimming', 'sharing a drink with friends'], k=2)
-book = random.choice([('The Samurai', 'Sh&#363saku End&#333'), ('The Postmodern Condition: A Report on Knowledge', 'Jean-Fran&#231ois Lyotard')])
+p_interest = random.sample(['cooking', 'playing board games', 'burning incense', 'watching the Premier League', 'drinking tea', 'going for walks', 'bouldering', 'running', 'swimming', 'sharing a drink with friends'], k=2)
+p_book = random.choice([('The Samurai', 'Sh&#363saku End&#333'), ('The Postmodern Condition: A Report on Knowledge', 'Jean-Fran&#231ois Lyotard')])
 flavor = random.choice(['though not necessarily', 'sometimes', 'especially', 'but never'])
 GLOBAL_CONTEXT = {
 	"JIDN": {
 		"Philip Griffith": {
 			"image": "/images/philip.jpg",
 			"email": BLOG_EMAIL,
-			"bio": f"Philip enjoys {interest[0]} and {interest[1]}, {flavor} at the same time. He is currently reading <em>{book[0]}</em> by {book[1]}.",
+			"bio": f"Philip enjoys {p_interest[0]} and {p_interest[1]}, {flavor} at the same time. He is currently reading <em>{p_book[0]}</em> by {p_book[1]}.",
 			"map": "Tallahassee, FL USA",
 			"social": (
 				"https://github.com/PhilipGriffith",
