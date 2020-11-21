@@ -1368,7 +1368,7 @@ import random
 p_interest = random.sample(['cooking', 'playing board games', 'burning incense', 'watching the Premier League', 'drinking tea', 'going for walks', 'bouldering', 'running', 'swimming', 'sharing a drink with friends'], k=2)
 p_book = random.choice([('The Samurai', 'Sh&#363saku End&#333'), ('The Postmodern Condition: A Report on Knowledge', 'Jean-Fran&#231ois Lyotard')])
 mgm_zodiac = random.sample(['vegetarian', 'cornucopia'], k=2)
-b_interest = random.sample(['fluffy cats', "striving to be a rainbow in someone else's raincloud", 'singing dolly parton songs', 'dancing when no one is watching' 'hiking', 'biking red hills', 'sunsets', 'swamp walks', 'thrifting', 'boozing with pals', 'hot gos', 'cooking'], k=2)
+b_interest = random.sample(['fluffy cats', "striving to be a rainbow in someone else's raincloud", 'singing dolly parton songs', 'dancing when no one is watching' 'hiking', 'biking red hills', 'sunsets', 'swamp walks', 'thrifting', 'boozing with pals', 'hot goss', 'cooking'], k=2)
 b_book = random.choice([('Bad Monkey', 'Carl Hiassen'), ('The Hero with a Thousand Faces', 'Joseph Campbell'), ('Trick Mirror', 'Jia Tolentino')])
 season = random.choice(['fall', 'spring', 'summer', 'winter'])
 b_flavor=random.choice(['alway', 'especially', 'often'])
