@@ -1392,9 +1392,9 @@ GLOBAL_CONTEXT = {
                         "bio": f"Mary Grace is a {mgm_zodiac[0]} sun sign, {mgm_zodiac[1]} moon sign"
                         },
         "Dr Brittany Wood": {
-			"image": "/images/Brittany.jpg",
+			"image": "/images/Brittany.jpeg",
 			"email": BLOG_EMAIL,
-			"bio": f"Brittany loves {b_interest[0]} and {b_interest[1]}, {b_flavor} in the {season}. She is currently reading <em>{p_book[0]}</em> by {b_book[1]}.",
+			"bio": f"Brittany loves {b_interest[0]} and {b_interest[1]}, {b_flavor} in the {season}. She is currently reading <em>{b_book[0]}</em> by {b_book[1]}.",
 			"map": "Tallahassee, FL USA",
 			"social": (
 				"https://github.com/DrBrittany",
