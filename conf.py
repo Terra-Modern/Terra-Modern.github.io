@@ -1384,13 +1384,12 @@ GLOBAL_CONTEXT = {
 				"https://github.com/PhilipGriffith",
 				"https://www.linkedin.com/in/philip-griffith-3879339b",
                                 )
-
 		},
-                "Mary Grace McClellan": {
-                        "image": "/images/fatlas.jpg",
-                        "email": BLOG_EMAIL,
-                        "bio": f"Mary Grace is a {mgm_zodiac[0]} sun sign, {mgm_zodiac[1]} moon sign"
-                        },
+        "Mary Grace McClellan": {
+            "image": "/images/fatlas.jpg",
+            "email": BLOG_EMAIL,
+            "bio": f"Mary Grace is a {mgm_zodiac[0]} sun sign, {mgm_zodiac[1]} moon sign"
+            },
         "Dr Brittany Wood": {
 			"image": "/images/Brittany.jpeg",
 			"email": BLOG_EMAIL,
@@ -1399,11 +1398,7 @@ GLOBAL_CONTEXT = {
 			"social": (
 				"https://github.com/DrBrittany",
                                 )
-
 		}
-
-
-
 	}
 }
 
