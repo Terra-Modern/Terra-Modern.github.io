@@ -1367,6 +1367,8 @@ WARN_ABOUT_TAG_METADATA = False
 import random
 p_interest = random.sample(['cooking', 'playing board games', 'burning incense', 'watching the Premier League', 'drinking tea', 'going for walks', 'bouldering', 'running', 'swimming', 'sharing a drink with friends'], k=2)
 p_book = random.choice([('The Samurai', 'Sh&#363saku End&#333'), ('The Postmodern Condition: A Report on Knowledge', 'Jean-Fran&#231ois Lyotard')])
+
+mgm_zodiac = random.sample(['vegetarian', 'cornucopia'], k=2)
 flavor = random.choice(['though not necessarily', 'sometimes', 'especially', 'but never'])
 GLOBAL_CONTEXT = {
 	"JIDN": {
@@ -1378,8 +1380,17 @@ GLOBAL_CONTEXT = {
 			"social": (
 				"https://github.com/PhilipGriffith",
 				"https://www.linkedin.com/in/philip-griffith-3879339b",
-			)			
-		}
+                                )
+    
+		},
+                "Mary Grace McClellan": {
+                        "image": "/images/fatlas.jpg",
+                        "email": BLOG_EMAIL,
+                        "bio": f"Mary Grace is a {mgm_zodiac[0]} sun sign, {mgm_zodiac[1]} moon sign"
+                        }
+
+    
+    
 	}
 }
 
