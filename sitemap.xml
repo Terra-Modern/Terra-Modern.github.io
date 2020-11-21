@@ -7,66 +7,74 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://Terra-Modern.github.io/</loc>
-  <lastmod>2020-11-07T02:06:00Z</lastmod>
+  <lastmod>2020-11-21T01:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/archive/</loc>
-  <lastmod>2020-11-06T20:23:00Z</lastmod>
+  <lastmod>2020-11-21T00:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/archive/2020/</loc>
-  <lastmod>2020-11-06T20:23:00Z</lastmod>
+  <lastmod>2020-11-21T00:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/authors/</loc>
-  <lastmod>2020-11-21T03:15:00Z</lastmod>
+  <lastmod>2020-11-21T02:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/authors/dr-brittany-wood/</loc>
-  <lastmod>2020-11-21T02:15:00Z</lastmod>
+  <lastmod>2020-11-21T02:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/authors/mary-grace-mcclellan/</loc>
-  <lastmod>2020-11-21T02:15:00Z</lastmod>
+  <lastmod>2020-11-21T01:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/authors/philip-griffith/</loc>
-  <lastmod>2020-11-21T00:59:00Z</lastmod>
+  <lastmod>2020-11-21T01:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://Terra-Modern.github.io/authors/terra-modern/</loc>
+  <lastmod>2020-11-21T01:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/categories/</loc>
-  <lastmod>2020-11-21T02:15:00Z</lastmod>
+  <lastmod>2020-11-21T01:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/categories/author/</loc>
-  <lastmod>2020-11-21T02:15:00Z</lastmod>
+  <lastmod>2020-11-21T01:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/categories/cat_blog/</loc>
-  <lastmod>2020-11-09T04:19:00Z</lastmod>
+  <lastmod>2020-11-21T00:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/categories/github/</loc>
-  <lastmod>2020-11-09T04:19:00Z</lastmod>
+  <lastmod>2020-11-21T00:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/categories/nikola/</loc>
-  <lastmod>2020-11-09T04:19:00Z</lastmod>
+  <lastmod>2020-11-21T00:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/maps/leaflet_demo.html</loc>
-  <lastmod>2020-11-06T20:15:00Z</lastmod>
+  <lastmod>2020-11-21T00:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/posts/how-to-choose-an-open-source-spatial-database-thats-right-for-you/</loc>
-  <lastmod>2020-11-21T02:15:00Z</lastmod>
+  <lastmod>2020-11-21T01:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://Terra-Modern.github.io/posts/notebook-test/</loc>
+  <lastmod>2020-11-21T00:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/posts/set-up-a-website-with-nikola-and-github-pages/</loc>
-  <lastmod>2020-11-10T14:01:00Z</lastmod>
+  <lastmod>2020-11-21T00:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/posts/this-must-be-the-place/</loc>
-  <lastmod>2020-11-21T02:15:00Z</lastmod>
+  <lastmod>2020-11-21T01:41:00Z</lastmod>
  </url>
 </urlset>
