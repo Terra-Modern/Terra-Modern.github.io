@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://Terra-Modern.github.io/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script><link rel="prefetch" href="posts/set-up-a-website-with-nikola-and-github-pages/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script><link rel="prefetch" href="posts/notebook-test/" type="text/html">
 </head>
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -44,7 +44,112 @@
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/set-up-a-website-with-nikola-and-github-pages/" class="u-url">Set up a website with Nikola and GitHub Pages</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/notebook-test/" class="u-url">notebook test</a></h1>
+        <div class="metadata">
+            <p class="dateline"><a href="posts/notebook-test/" rel="bookmark"><time class="post-date published dt-published" datetime="2020-11-06T16:31:08-05:00" title="2020-11-06 ">2020-11-06 </time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">basemaps</span><span class="p">,</span> <span class="n">basemap_to_tiles</span><span class="p">,</span> <span class="n">DrawControl</span>
+
+<span class="n">watercolor</span> <span class="o">=</span> <span class="n">basemap_to_tiles</span><span class="p">(</span><span class="n">basemaps</span><span class="o">.</span><span class="n">Stamen</span><span class="o">.</span><span class="n">Watercolor</span><span class="p">)</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="p">(</span><span class="n">watercolor</span><span class="p">,</span> <span class="p">),</span> <span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">354</span><span class="p">),</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">draw_control</span> <span class="o">=</span> <span class="n">DrawControl</span><span class="p">()</span>
+<span class="n">draw_control</span><span class="o">.</span><span class="n">polyline</span> <span class="o">=</span>  <span class="p">{</span>
+    <span class="s2">"shapeOptions"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"color"</span><span class="p">:</span> <span class="s2">"#6bc2e5"</span><span class="p">,</span>
+        <span class="s2">"weight"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">"opacity"</span><span class="p">:</span> <span class="mf">1.0</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">draw_control</span><span class="o">.</span><span class="n">polygon</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"shapeOptions"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"fillColor"</span><span class="p">:</span> <span class="s2">"#6be5c3"</span><span class="p">,</span>
+        <span class="s2">"color"</span><span class="p">:</span> <span class="s2">"#6be5c3"</span><span class="p">,</span>
+        <span class="s2">"fillOpacity"</span><span class="p">:</span> <span class="mf">1.0</span>
+    <span class="p">},</span>
+    <span class="s2">"drawError"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"color"</span><span class="p">:</span> <span class="s2">"#dd253b"</span><span class="p">,</span>
+        <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"Oups!"</span>
+    <span class="p">},</span>
+    <span class="s2">"allowIntersection"</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">}</span>
+<span class="n">draw_control</span><span class="o">.</span><span class="n">circle</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"shapeOptions"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"fillColor"</span><span class="p">:</span> <span class="s2">"#efed69"</span><span class="p">,</span>
+        <span class="s2">"color"</span><span class="p">:</span> <span class="s2">"#efed69"</span><span class="p">,</span>
+        <span class="s2">"fillOpacity"</span><span class="p">:</span> <span class="mf">1.0</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">draw_control</span><span class="o">.</span><span class="n">rectangle</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"shapeOptions"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"fillColor"</span><span class="p">:</span> <span class="s2">"#fca45d"</span><span class="p">,</span>
+        <span class="s2">"color"</span><span class="p">:</span> <span class="s2">"#fca45d"</span><span class="p">,</span>
+        <span class="s2">"fillOpacity"</span><span class="p">:</span> <span class="mf">1.0</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">draw_control</span><span class="p">)</span>
+
+<span class="n">m</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+
+ 
+ 
+<div id="346d38f7-65de-4d18-8fd7-33e14ce1c79b"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#346d38f7-65de-4d18-8fd7-33e14ce1c79b');
+</script><script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "2475d58090514429a41a0b06aec2b897", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/set-up-a-website-with-nikola-and-github-pages/" class="u-url">Set up a website with Nikola and GitHub Pages</a></h1>
         <div class="metadata">
             <p class="dateline"><a href="posts/set-up-a-website-with-nikola-and-github-pages/" rel="bookmark"><time class="post-date published dt-published" datetime="2020-11-06T15:33:16-05:00" title="2020-11-06 ">2020-11-06 </time></a></p>
         </div>
@@ -62,11 +167,10 @@
 
 
     
-
-
-
         
-        <footer id="footer"><p>Contents © 2020         <a href="mailto:geoterramodern@gmail.com">Terra Modern</a> - Powered by         <a href="https://getnikola.com" rel="nofollow" target="_blank">Nikola</a>         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script><footer id="footer"><p>Contents © 2020         <a href="mailto:geoterramodern@gmail.com">Terra Modern</a> - Powered by         <a href="https://getnikola.com" rel="nofollow" target="_blank">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a></p>
             
         </footer>
