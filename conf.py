@@ -1371,7 +1371,7 @@ mgm_zodiac = random.sample(['vegetarian', 'cornucopia'], k=2)
 b_interest = random.sample(['fluffy cats', "striving to be a rainbow in someone else's raincloud", 'singing dolly parton songs', 'dancing when no one is watching' 'hiking', 'biking red hills', 'sunsets', 'swamp walks', 'thrifting', 'boozing with pals', 'hot gos', 'cooking'], k=2)
 b_book = random.choice([('Bad Monkey', 'Carl Hiassen'), ('The Hero with a Thousand Faces', 'Joseph Campbell'), ('Trick Mirror', 'Jia Tolentino')])
 season = random.choice(['fall', 'spring', 'summer', 'winter'])
-b_flavor=random.choice(['alway', 'especially', 'often'])
+b_flavor = random.choice(['alway', 'especially', 'often'])
 flavor = random.choice(['though not necessarily', 'sometimes', 'especially', 'but never'])
 GLOBAL_CONTEXT = {
 	"JIDN": {
@@ -1383,13 +1383,13 @@ GLOBAL_CONTEXT = {
 			"social": (
 				"https://github.com/PhilipGriffith",
 				"https://www.linkedin.com/in/philip-griffith-3879339b",
-                                )
+            )
 		},
         "Mary Grace McClellan": {
             "image": "/images/fatlas.jpg",
             "email": BLOG_EMAIL,
             "bio": f"Mary Grace is a {mgm_zodiac[0]} sun sign, {mgm_zodiac[1]} moon sign"
-            },
+        },
         "Dr Brittany Wood": {
 			"image": "/images/Brittany.jpeg",
 			"email": BLOG_EMAIL,
@@ -1397,7 +1397,7 @@ GLOBAL_CONTEXT = {
 			"map": "Tallahassee, FL USA",
 			"social": (
 				"https://github.com/DrBrittany",
-                                )
+            )
 		}
 	}
 }
