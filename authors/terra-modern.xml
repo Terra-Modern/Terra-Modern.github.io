@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Terra Modern (Posts by Terra Modern)</title><link>https://Terra-Modern.github.io/</link><description></description><atom:link href="https://Terra-Modern.github.io/authors/terra-modern.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:geoterramodern@gmail.com"&gt;Terra Modern&lt;/a&gt; 
-&lt;a rel="license" href="http://creativecommons.org/licenses/by/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /&gt;&lt;/a&gt;</copyright><lastBuildDate>Sat, 21 Nov 2020 01:15:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>notebook test</title><link>https://Terra-Modern.github.io/posts/notebook-test/</link><dc:creator>Terra Modern</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /&gt;&lt;/a&gt;</copyright><lastBuildDate>Sat, 21 Nov 2020 00:59:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>notebook test</title><link>https://Terra-Modern.github.io/posts/notebook-test/</link><dc:creator>Terra Modern</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -69,10 +69,10 @@
 
  
  
-&lt;div id="ba8b8946-3fbd-4493-bd40-9972f12a2445"&gt;&lt;/div&gt;
+&lt;div id="346d38f7-65de-4d18-8fd7-33e14ce1c79b"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#ba8b8946-3fbd-4493-bd40-9972f12a2445');
+var element = $('#346d38f7-65de-4d18-8fd7-33e14ce1c79b');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "2475d58090514429a41a0b06aec2b897", "version_major": 2, "version_minor": 0}
