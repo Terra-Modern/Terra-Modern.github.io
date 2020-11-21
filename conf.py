@@ -1367,8 +1367,11 @@ WARN_ABOUT_TAG_METADATA = False
 import random
 p_interest = random.sample(['cooking', 'playing board games', 'burning incense', 'watching the Premier League', 'drinking tea', 'going for walks', 'bouldering', 'running', 'swimming', 'sharing a drink with friends'], k=2)
 p_book = random.choice([('The Samurai', 'Sh&#363saku End&#333'), ('The Postmodern Condition: A Report on Knowledge', 'Jean-Fran&#231ois Lyotard')])
-
 mgm_zodiac = random.sample(['vegetarian', 'cornucopia'], k=2)
+b_interest = random.sample(['fluffy cats', "striving to be a rainbow in someone else's raincloud", 'singing dolly parton songs', 'dancing when no one is watching' 'hiking', 'biking red hills', 'sunsets', 'swamp walks', 'thrifting', 'boozing with pals', 'hot gos', 'cooking'], k=2)
+b_book = random.choice([('Bad Monkey', 'Carl Hiassen'), ('The Hero with a Thousand Faces', 'Joseph Campbell'), ('Trick Mirror', 'Jia Tolentino')])
+season = random.choice(['fall', 'spring', 'summer', 'winter'])
+b_flavor=random.choice(['alway', 'especially', 'often'])
 flavor = random.choice(['though not necessarily', 'sometimes', 'especially', 'but never'])
 GLOBAL_CONTEXT = {
 	"JIDN": {
@@ -1381,16 +1384,26 @@ GLOBAL_CONTEXT = {
 				"https://github.com/PhilipGriffith",
 				"https://www.linkedin.com/in/philip-griffith-3879339b",
                                 )
-    
+
 		},
                 "Mary Grace McClellan": {
                         "image": "/images/fatlas.jpg",
                         "email": BLOG_EMAIL,
                         "bio": f"Mary Grace is a {mgm_zodiac[0]} sun sign, {mgm_zodiac[1]} moon sign"
-                        }
+                        },
+        "Dr Brittany Wood": {
+			"image": "/images/Brittany.jpg",
+			"email": BLOG_EMAIL,
+			"bio": f"Brittany loves {b_interest[0]} and {b_interest[1]}, {b_flavor} in the {season}. She is currently reading <em>{p_book[0]}</em> by {b_book[1]}.",
+			"map": "Tallahassee, FL USA",
+			"social": (
+				"https://github.com/DrBrittany",
+                                )
 
-    
-    
+		}
+
+
+
 	}
 }
 
