@@ -14,8 +14,16 @@
   <lastmod>2020-11-21T01:08:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://Terra-Modern.github.io/authors/terra-modern.xml</loc>
+  <lastmod>2020-11-25T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://Terra-Modern.github.io/categories/cat_announcements.xml</loc>
+  <lastmod>2020-11-25T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://Terra-Modern.github.io/categories/cat_blog.xml</loc>
-  <lastmod>2020-11-21T03:52:00Z</lastmod>
+  <lastmod>2020-11-25T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://Terra-Modern.github.io/categories/github.xml</loc>
@@ -26,11 +34,15 @@
   <lastmod>2020-11-21T01:08:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://Terra-Modern.github.io/categories/postgis.xml</loc>
+  <lastmod>2020-11-25T01:33:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://Terra-Modern.github.io/rss.xml</loc>
-  <lastmod>2020-11-21T03:52:00Z</lastmod>
+  <lastmod>2020-11-25T01:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://Terra-Modern.github.io/sitemap.xml</loc>
-  <lastmod>2020-11-21T03:52:00Z</lastmod>
+  <lastmod>2020-11-25T01:33:00Z</lastmod>
  </sitemap>
 </sitemapindex>

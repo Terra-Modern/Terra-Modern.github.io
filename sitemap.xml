@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/authors/</loc>
-  <lastmod>2020-11-21T03:52:00Z</lastmod>
+  <lastmod>2020-11-25T01:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/authors/dr-brittany-wood/</loc>
@@ -30,8 +30,16 @@
   <lastmod>2020-11-21T00:59:00Z</lastmod>
  </url>
  <url>
+  <loc>https://Terra-Modern.github.io/authors/terra-modern/</loc>
+  <lastmod>2020-11-25T01:26:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://Terra-Modern.github.io/categories/</loc>
-  <lastmod>2020-11-21T03:52:00Z</lastmod>
+  <lastmod>2020-11-25T01:26:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://Terra-Modern.github.io/categories/cat_announcements/</loc>
+  <lastmod>2020-11-25T01:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/categories/cat_blog/</loc>
@@ -46,12 +54,16 @@
   <lastmod>2020-11-09T04:19:00Z</lastmod>
  </url>
  <url>
+  <loc>https://Terra-Modern.github.io/categories/postgis/</loc>
+  <lastmod>2020-11-25T01:26:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://Terra-Modern.github.io/maps/leaflet_demo.html</loc>
   <lastmod>2020-11-06T20:15:00Z</lastmod>
  </url>
  <url>
-  <loc>https://Terra-Modern.github.io/posts/how-to-choose-an-open-source-spatial-database-thats-right-for-you/</loc>
-  <lastmod>2020-11-21T02:15:00Z</lastmod>
+  <loc>https://Terra-Modern.github.io/posts/postgis-reading-group/</loc>
+  <lastmod>2020-11-25T01:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/posts/set-up-a-website-with-nikola-and-github-pages/</loc>
