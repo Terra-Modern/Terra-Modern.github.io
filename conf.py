@@ -1366,7 +1366,7 @@ WARN_ABOUT_TAG_METADATA = False
 # It can be anything, data, functions, modules, etc.
 import random
 p_interest = random.sample(['cooking', 'playing board games', 'burning incense', 'watching the Premier League', 'drinking tea', 'going for walks', 'bouldering', 'running', 'swimming', 'sharing a drink with friends'], k=2)
-p_book = random.choice([('Piranesi', 'Susanna Clarke'), ('The Postmodern Condition: A Report on Knowledge', 'Jean-Fran&#231ois Lyotard')])
+p_book = random.choice([("The Djinn in the Nightingale's Eye", 'A.S. Byatt'), ('Ludwig Wittgenstein: The Duty of Genius', 'Ray Monk')])
 p_flavor = random.choice(['though not necessarily', 'sometimes', 'especially', 'but never'])
 mgm_zodiac = random.sample(['vegetarian', 'cornucopia'], k=2)
 b_interest = random.sample(['fluffy cats', "striving to be a rainbow in someone else's raincloud", 'singing dolly parton songs', 'dancing when no one is watching' 'hiking', 'biking red hills', 'sunsets', 'swamp walks', 'thrifting', 'boozing with pals', 'hot gos', 'cooking'], k=2)
