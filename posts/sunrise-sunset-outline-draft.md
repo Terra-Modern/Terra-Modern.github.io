@@ -1,13 +1,13 @@
 <!--
 .. title: Sunrise Sunset Outline
-.. slug: sunrise-sunset-outline-draft
+.. slug: sunrise-sunset-outline
 .. date: 2021-02-02 23:13:04 UTC-05:00
 .. tags: 
 .. category: SunriseSunset
 .. link: 
 .. description: 
 .. type: text
-.. status: draft 
+.. status: draft
 -->
 
 
