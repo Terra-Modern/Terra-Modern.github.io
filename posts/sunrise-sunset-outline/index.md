@@ -11,7 +11,7 @@
 -->
 
 
-### Intro
+### Intro [post 1]
 
 - Link to project
 	* http://www.geo.utexas.edu/courses/371c/project/2019F/Culotta_GIS_Project.pdf
@@ -19,7 +19,7 @@
 - Needed software
 - Needed data
 
-### Data
+### Data [post 1]
 
 - Sources/acquisition
 	* DEM -- MG
@@ -27,13 +27,13 @@
 	* LULC
 	* Link to geopkg on GitHub
 
-- Processing 
+- Processing [post 1]
 
 	* DEM -- MG
 	* FLMA
 	* LULC
 
-### Methods and rationale for each step
+### Methods and rationale for each step [post 2]
 
 - Clip LULC to FLMA 
 - Filter LULC that meets certain criteria (select by attributes)
@@ -43,11 +43,13 @@
 - Raster calculator to combine all rasters 
 - Ground-truth ;) 
 
-#### Results
+#### Results [post 2]
 
 - Pictures 
 - Map (?)
 
-#### Limitations and future work
+#### Limitations and future work [post 2]
+
+#### Code for replicating the project [post 3?]
 
 

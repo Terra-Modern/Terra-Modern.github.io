@@ -18,10 +18,6 @@
   <lastmod>2020-11-21T00:38:00Z</lastmod>
  </url>
  <url>
-  <loc>https://Terra-Modern.github.io/archive/2021/</loc>
-  <lastmod>2021-02-03T04:15:00Z</lastmod>
- </url>
- <url>
   <loc>https://Terra-Modern.github.io/authors/</loc>
   <lastmod>2021-02-05T02:47:00Z</lastmod>
  </url>
@@ -35,7 +31,7 @@
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/categories/</loc>
-  <lastmod>2021-02-05T02:47:00Z</lastmod>
+  <lastmod>2021-02-05T02:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/categories/cat_announcements/</loc>
@@ -44,10 +40,6 @@
  <url>
   <loc>https://Terra-Modern.github.io/categories/cat_blog/</loc>
   <lastmod>2020-11-21T00:38:00Z</lastmod>
- </url>
- <url>
-  <loc>https://Terra-Modern.github.io/categories/cat_sunrisesunset/</loc>
-  <lastmod>2021-02-03T04:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://Terra-Modern.github.io/categories/github/</loc>
@@ -72,9 +64,5 @@
  <url>
   <loc>https://Terra-Modern.github.io/posts/set-up-a-website-with-nikola-and-github-pages/</loc>
   <lastmod>2020-11-21T00:38:00Z</lastmod>
- </url>
- <url>
-  <loc>https://Terra-Modern.github.io/posts/sunrise-sunset-outline-draft/</loc>
-  <lastmod>2021-02-03T04:15:00Z</lastmod>
  </url>
 </urlset>
