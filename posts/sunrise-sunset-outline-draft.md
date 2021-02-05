@@ -43,13 +43,15 @@
 - Raster calculator to combine all rasters 
 - Ground-truth ;) 
 
-#### Results [post 2]
+### Results [post 2]
 
 - Pictures 
 - Map (?)
 
-#### Limitations and future work [post 2]
 
-#### Code for replicating the project [post 3?]
+### Limitations and future work [post 2]
+
+
+### Code for replicating the project [post 3?]
 
 
