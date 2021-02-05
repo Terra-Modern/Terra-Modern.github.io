@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://Terra-Modern.github.io/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script><link rel="prefetch" href="posts/postgis-reading-group/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script><link rel="prefetch" href="posts/sunrise-sunset-outline-draft/" type="text/html">
 </head>
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -43,7 +43,67 @@
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/postgis-reading-group/" class="u-url">PostGIS Reading Group</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/sunrise-sunset-outline-draft/" class="u-url">Sunrise Sunset Outline</a></h1>
+        <div class="metadata">
+            <p class="dateline"><a href="posts/sunrise-sunset-outline-draft/" rel="bookmark"><time class="post-date published dt-published" datetime="2021-02-02T23:13:04-05:00" title="2021-02-02 ">2021-02-02 </time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/sunrise-sunset-outline-draft/#disqus_thread" data-disqus-identifier="cache/posts/sunrise-sunset-outline-draft.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<h4>Intro</h4>
+<ul>
+<li>Link to project<ul>
+<li>http://www.geo.utexas.edu/courses/371c/project/2019F/Culotta_GIS_Project.pdf</li>
+</ul>
+</li>
+<li>Project rationale</li>
+<li>Needed software</li>
+<li>Needed data</li>
+</ul>
+<h4>Data</h4>
+<ul>
+<li>
+<p>Sources/acquisition</p>
+<ul>
+<li>DEM -- MG</li>
+<li>FLMA</li>
+<li>LULC</li>
+<li>Link to geopkg on GitHub</li>
+</ul>
+</li>
+<li>
+<p>Processing </p>
+<ul>
+<li>DEM -- MG</li>
+<li>FLMA</li>
+<li>LULC</li>
+</ul>
+</li>
+</ul>
+<h4>Methods and rationale for each step</h4>
+<ul>
+<li>Clip LULC to FLMA </li>
+<li>Filter LULC that meets certain criteria (select by attributes)</li>
+<li>Rasterize output</li>
+<li>Create aspect raster</li>
+<li>Create viewshed analysis raster</li>
+<li>Raster calculator to combine all rasters </li>
+<li>Ground-truth ;) </li>
+</ul>
+<h5>Results</h5>
+<ul>
+<li>Pictures </li>
+<li>Map (?)</li>
+</ul>
+<h5>Limitations and future work</h5>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/postgis-reading-group/" class="u-url">PostGIS Reading Group</a></h1>
         <div class="metadata">
             <p class="dateline"><a href="posts/postgis-reading-group/" rel="bookmark"><time class="post-date published dt-published" datetime="2020-11-23T16:17:19-05:00" title="2020-11-23 ">2020-11-23 </time></a></p>
                 <p class="commentline">

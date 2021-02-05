@@ -3,21 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PostGIS Reading Group | Terra Modern</title>
+<title>Sunrise Sunset Outline | Terra Modern</title>
 <link href="../../assets/css/all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://Terra-Modern.github.io/posts/postgis-reading-group/">
+<link rel="canonical" href="https://Terra-Modern.github.io/posts/sunrise-sunset-outline-draft/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script><meta name="author" content="Terra Modern">
-<link rel="prev" href="../set-up-a-website-with-nikola-and-github-pages/" title="Set up a website with Nikola and GitHub Pages" type="text/html">
-<link rel="next" href="../sunrise-sunset-outline-draft/" title="Sunrise Sunset Outline" type="text/html">
+<link rel="prev" href="../postgis-reading-group/" title="PostGIS Reading Group" type="text/html">
 <meta property="og:site_name" content="Terra Modern">
-<meta property="og:title" content="PostGIS Reading Group">
-<meta property="og:url" content="https://Terra-Modern.github.io/posts/postgis-reading-group/">
-<meta property="og:description" content="Good news! Some of our FOSS friends are starting an online reading group to work through Regina Obe and Leo Hsu's PostGIS in Action, pretty much the book for learning all the ins and outs of the popul">
+<meta property="og:title" content="Sunrise Sunset Outline">
+<meta property="og:url" content="https://Terra-Modern.github.io/posts/sunrise-sunset-outline-draft/">
+<meta property="og:description" content="Intro
+
+Link to project
+http://www.geo.utexas.edu/courses/371c/project/2019F/Culotta_GIS_Project.pdf
+
+
+Project rationale
+Needed software
+Needed data
+
+Data
+
+
+Sources/acquisition
+
+DEM -- MG
+FLMA
+LULC
+Lin">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-11-23T16:17:19-05:00">
-<meta property="article:tag" content="PostGIS">
+<meta property="article:published_time" content="2021-02-02T23:13:04-05:00">
 </head>
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -50,15 +66,15 @@
       <div class="container content" id="content">
         
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/BlogPosting"><header><h1 class="post-title p-name entry-title" itemprop="headline">
-      <a href="https://Terra-Modern.github.io/posts/postgis-reading-group/" class="u-url">PostGIS Reading Group</a>
+      <a href="https://Terra-Modern.github.io/posts/sunrise-sunset-outline-draft/" class="u-url">Sunrise Sunset Outline</a>
 </h1>
         <div class="metadata">
         <meta itemprop="inLanguage" content="en">
 <p class="dateline">
-            <time class="post-date published dt-published" datetime="2020-11-23T16:17:19-05:00" itemprop="datePublished" title="2020-11-23 ">2020-11-23 </time></p>
+            <time class="post-date published dt-published" datetime="2021-02-02T23:13:04-05:00" itemprop="datePublished" title="2021-02-02 ">2021-02-02 </time></p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/postgis-reading-group.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/sunrise-sunset-outline-draft.html">Comments</a>
 
 
         </p>
@@ -66,26 +82,67 @@
         
 
     </header><section class="e-content entry-content" itemprop="articleBody text"><div>
-<p>Good news! Some of our FOSS friends are starting an online reading group to work through Regina Obe and Leo Hsu's <a href="https://www.manning.com/books/postgis-in-action-second-edition" target="_blank">PostGIS in Action</a>, pretty much <em>the</em> book for learning all the ins and outs of the popular spatial database extender for PostgreSQL. Check out their Eventbrite page to learn more!</p>
-<p><a href="https://www.eventbrite.com/e/beers-over-obe-tickets-129163195595" target="_blank"><img alt="Beers-Over-Obe" src="../../images/beers_over_obe.jpg"></a></p>
+<h4>Intro</h4>
+<ul>
+<li>Link to project<ul>
+<li>http://www.geo.utexas.edu/courses/371c/project/2019F/Culotta_GIS_Project.pdf</li>
+</ul>
+</li>
+<li>Project rationale</li>
+<li>Needed software</li>
+<li>Needed data</li>
+</ul>
+<h4>Data</h4>
+<ul>
+<li>
+<p>Sources/acquisition</p>
+<ul>
+<li>DEM -- MG</li>
+<li>FLMA</li>
+<li>LULC</li>
+<li>Link to geopkg on GitHub</li>
+</ul>
+</li>
+<li>
+<p>Processing </p>
+<ul>
+<li>DEM -- MG</li>
+<li>FLMA</li>
+<li>LULC</li>
+</ul>
+</li>
+</ul>
+<h4>Methods and rationale for each step</h4>
+<ul>
+<li>Clip LULC to FLMA </li>
+<li>Filter LULC that meets certain criteria (select by attributes)</li>
+<li>Rasterize output</li>
+<li>Create aspect raster</li>
+<li>Create viewshed analysis raster</li>
+<li>Raster calculator to combine all rasters </li>
+<li>Ground-truth ;) </li>
+</ul>
+<h5>Results</h5>
+<ul>
+<li>Pictures </li>
+<li>Map (?)</li>
+</ul>
+<h5>Limitations and future work</h5>
 </div>
     </section><aside class="sharing no-print"><a href="#content" aria-label="Post beginning">
        <i class="fa fa-2x fa-fw fa-arrow-circle-up" aria-hidden="true" title="Post beginning"></i>
     </a>
-    <a href="https://Terra-Modern.github.io/posts/set-up-a-website-with-nikola-and-github-pages/" rel="prev" title="Set up a website with Nikola and GitHub Pages">
-       <i class="fa fa-2x fa-fw fa-arrow-circle-left" aria-hidden="true" title="Previous post: Set up a website with Nikola and GitHub Pages"></i>
-    </a>
-    <a href="https://Terra-Modern.github.io/posts/sunrise-sunset-outline-draft/" rel="next" title="Next post: Sunrise Sunset Outline" aria-label="Next post: Sunrise Sunset Outline">
-       <i class="fa fa-2x fa-fw fa-arrow-circle-right" aria-hidden="true"></i>
+    <a href="https://Terra-Modern.github.io/posts/postgis-reading-group/" rel="prev" title="PostGIS Reading Group">
+       <i class="fa fa-2x fa-fw fa-arrow-circle-left" aria-hidden="true" title="Previous post: PostGIS Reading Group"></i>
     </a>
     <span class="post-sharing">
-     <a href="http://twitter.com/share?text=PostGIS+Reading+Group&amp;url=https%3A%2F%2FTerra-Modern.github.io%2Fposts%2Fpostgis-reading-group%2F" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" aria-label="Share on Twitter">
+     <a href="http://twitter.com/share?text=Sunrise+Sunset+Outline&amp;url=https%3A%2F%2FTerra-Modern.github.io%2Fposts%2Fsunrise-sunset-outline-draft%2F" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" aria-label="Share on Twitter">
        <i class="fab fa-2x fa-fw fa-twitter-square" aria-hidden="true" title="Share on Twitter">
      </i></a>
-     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FTerra-Modern.github.io%2Fposts%2Fpostgis-reading-group%2F" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" aria-label="Share on Facebook">
+     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FTerra-Modern.github.io%2Fposts%2Fsunrise-sunset-outline-draft%2F" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" aria-label="Share on Facebook">
        <i class="fab fa-2x fa-fw fa-facebook-square" style="margin-left: -8px" aria-hidden="true" title="Share of Facebook">
      </i></a>
-     <a href="https://plus.google.com/share?url=https%3A%2F%2FTerra-Modern.github.io%2Fposts%2Fpostgis-reading-group%2F" aria-label="Share on Google+" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+     <a href="https://plus.google.com/share?url=https%3A%2F%2FTerra-Modern.github.io%2Fposts%2Fsunrise-sunset-outline-draft%2F" aria-label="Share on Google+" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
        <i class="fab fa-2x fa-fw fa-google-plus-square" style="margin-left: -8px" aria-hidden="true" title="Share on Google+">
      </i></a>
      </span>
@@ -98,9 +155,9 @@
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="terramodern",
-            disqus_url="https://Terra-Modern.github.io/posts/postgis-reading-group/",
-        disqus_title="PostGIS Reading Group",
-        disqus_identifier="cache/posts/postgis-reading-group.html",
+            disqus_url="https://Terra-Modern.github.io/posts/sunrise-sunset-outline-draft/",
+        disqus_title="Sunrise Sunset Outline",
+        disqus_identifier="cache/posts/sunrise-sunset-outline-draft.html",
         disqus_config = function () {
             this.language = "en";
         };
