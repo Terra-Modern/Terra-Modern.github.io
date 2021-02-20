@@ -6,7 +6,8 @@
 .. category: 
 .. link: 
 .. description: 
-.. type: draft
+.. type: text
+.. status: draft
 -->
 # Introduction
 
