@@ -1368,7 +1368,7 @@ import random
 p_interest = random.sample(['cooking', 'playing board games', 'burning incense', 'watching the Premier League', 'drinking tea', 'going for walks', 'bouldering', 'running', 'swimming', 'sharing a drink with friends'], k=2)
 p_book = random.choice([('The Wind in the Willows', 'Kenneth Grahame'), ('Ludwig Wittgenstein: The Duty of Genius', 'Ray Monk')])
 p_flavor = random.choice(['though not necessarily', 'sometimes', 'especially', 'but never'])
-mgm_zodiac = random.sample(['vegetarian', 'cornucopia'], k=2)
+mgm_interest = random.choice(['coffee', 'being a dog owner', 'car singing', 'chronic procrastination'])
 b_interest = random.sample(['fluffy cats', "striving to be a rainbow in someone else's raincloud", 'singing dolly parton songs', 'dancing when no one is watching' 'hiking purple mountains majesty', 'biking red hills', 'sunshine on her shoulders', 'swamp walks', 'thrifting', 'Spring flowers', 'hot gos'], k=2)
 b_book = random.choice([('Dinner at the Homesick Restaurant', 'Anne Tyler'), ('The Hero with a Thousand Faces', 'Joseph Campbell'), ('A Walk in the Woods', 'Bill Bryson')])
 b_flavor = random.choice(['always', 'especially', 'often'])
@@ -1387,9 +1387,9 @@ GLOBAL_CONTEXT = {
             )
 		},
         "Mary Grace McClellan": {
-            "image": "/images/fatlas.jpg",
-            "email": BLOG_EMAIL,
-            "bio": f"Mary Grace is a {mgm_zodiac[0]} sun sign, {mgm_zodiac[1]} moon sign"
+            "image": "/images/mgm.jpg",
+            "email": "marygracemcclellan@gmail.com",
+            "bio": f"Mary Grace firmly believes that {mgm_interest[0]} is a personality, and won't apologize for it. Luckily she is better at writing blog posts than short bios."
         },
         "Dr Brittany Wood": {
 			"image": "/images/Brittany.jpeg",
