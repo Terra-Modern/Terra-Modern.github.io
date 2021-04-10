@@ -1369,9 +1369,9 @@ p_interest = random.sample(['cooking', 'playing board games', 'burning incense',
 p_book = random.choice([("The Djinn in the Nightingale's Eye", 'A.S. Byatt'), ('Ludwig Wittgenstein: The Duty of Genius', 'Ray Monk')])
 p_flavor = random.choice(['though not necessarily', 'sometimes', 'especially', 'but never'])
 mgm_zodiac = random.sample(['vegetarian', 'cornucopia'], k=2)
-b_interest = random.sample(['fluffy cats', "striving to be a rainbow in someone else's raincloud", 'singing dolly parton songs', 'dancing when no one is watching' 'hiking', 'biking red hills', 'sunsets', 'swamp walks', 'thrifting', 'boozing with pals', 'hot gos', 'cooking'], k=2)
-b_book = random.choice([('Bad Monkey', 'Carl Hiassen'), ('The Hero with a Thousand Faces', 'Joseph Campbell'), ('Trick Mirror', 'Jia Tolentino')])
-b_flavor = random.choice(['alway', 'especially', 'often'])
+b_interest = random.sample(['fluffy cats', "striving to be a rainbow in someone else's raincloud", 'singing dolly parton songs', 'dancing when no one is watching' 'hiking purple mountains majesty', 'biking red hills', 'sunshine on her shoulders', 'swamp walks', 'thrifting', 'Spring flowers', 'hot gos'], k=2)
+b_book = random.choice([('Dinner at the Homesick Restaurant', 'Anne Tyler'), ('The Hero with a Thousand Faces', 'Joseph Campbell'), ('A Walk in the Woods', 'Bill Bryson')])
+b_flavor = random.choice(['always', 'especially', 'often'])
 b_season = random.choice(['fall', 'spring', 'summer', 'winter'])
 
 GLOBAL_CONTEXT = {
