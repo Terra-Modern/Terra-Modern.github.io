@@ -1366,12 +1366,12 @@ WARN_ABOUT_TAG_METADATA = False
 # It can be anything, data, functions, modules, etc.
 import random
 p_interest = random.sample(['cooking', 'playing board games', 'burning incense', 'watching the Premier League', 'drinking tea', 'going for walks', 'bouldering', 'running', 'swimming', 'sharing a drink with friends'], k=2)
-p_book = random.choice([("The Djinn in the Nightingale's Eye", 'A.S. Byatt'), ('Ludwig Wittgenstein: The Duty of Genius', 'Ray Monk')])
+p_book = random.choice([('The Wind in the Willows', 'Kenneth Grahame'), ('Ludwig Wittgenstein: The Duty of Genius', 'Ray Monk')])
 p_flavor = random.choice(['though not necessarily', 'sometimes', 'especially', 'but never'])
 mgm_zodiac = random.sample(['vegetarian', 'cornucopia'], k=2)
 b_interest = random.sample(['fluffy cats', "striving to be a rainbow in someone else's raincloud", 'singing dolly parton songs', 'dancing when no one is watching' 'hiking', 'biking red hills', 'sunsets', 'swamp walks', 'thrifting', 'boozing with pals', 'hot gos', 'cooking'], k=2)
 b_book = random.choice([('Bad Monkey', 'Carl Hiassen'), ('The Hero with a Thousand Faces', 'Joseph Campbell'), ('Trick Mirror', 'Jia Tolentino')])
-b_flavor = random.choice(['alway', 'especially', 'often'])
+b_flavor = random.choice(['always', 'especially', 'often'])
 b_season = random.choice(['fall', 'spring', 'summer', 'winter'])
 
 GLOBAL_CONTEXT = {
