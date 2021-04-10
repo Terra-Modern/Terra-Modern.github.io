@@ -8,15 +8,16 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="https://Terra-Modern.github.io/posts/sunrise-sunset-part-one/">
-<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script><meta name="author" content="Terra Modern">
-<meta name="robots" content="noindex">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script><meta name="author" content="Dr Brittany Wood">
+<link rel="prev" href="../postgis-reading-group/" title="PostGIS Reading Group" type="text/html">
 <meta property="og:site_name" content="Terra Modern">
 <meta property="og:title" content="Sunrise, Sunset: Part One">
 <meta property="og:url" content="https://Terra-Modern.github.io/posts/sunrise-sunset-part-one/">
-<meta property="og:description" content="Sunrise, sunset
+<meta property="og:description" content="Introduction
+Sunrise, sunset
 Sunrise, sunset
 Swiftly flow the days…
-Through word-of-mouth and experience, everyone has a general idea of the best place in town to view a sunrise or sunset. Terra Modern wanted to d">
+Through word-of-mouth and experience, everyone has a general idea of the best place in town to view a sunrise or sunset. Terra Moder">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2021-02-19T21:19:56-05:00">
 </head>
@@ -67,13 +68,16 @@ Through word-of-mouth and experience, everyone has a general idea of the best pl
         
 
     </header><section class="e-content entry-content" itemprop="articleBody text"><div>
+<h2>Introduction</h2>
 <p><em>Sunrise, sunset</em><br><em>Sunrise, sunset</em><br><em>Swiftly flow the days…</em><br></p>
 <p>Through word-of-mouth and experience, everyone has a general idea of the best place in town to view a sunrise or sunset. Terra Modern wanted to do a low-stakes open source GIS project to brush up on our skills, so we decided to conduct a data-driven site suitability analysis that identifies the PERFECT place in Leon County to view a sunrise or sunset. The analysis is loosely based on a <a href="http://www.geo.utexas.edu/courses/371c/project/2019F/Culotta_GIS_Project.pdf">tutorial by Scott Culotta</a> that uses ESRI software to find the best views in Cuyahoga County, Ohio. (Thanks for the idea, Scott!)</p>
 <p>But don’t worry: we’ll be using public data and open source software that can be freely downloaded by anyone, anytime, anywhere. This first post will give an overview of the data sources, the software needed to do the analysis, and the data processing steps. Our goal is to not only identify the best spots in Leon County to view a sunrise or sunset, but also to make sure that anyone reading this blog can repeat the analysis for their area of interest.</p>
+<!-- TEASER_END -->
+
 <p><img alt="sunset" src="../../images/sunset.jpg"></p>
 <h2>Data Sources and Data Acquisition</h2>
 <p>One of the upsides of living in Florida is that citizens can take advantage of <a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0200-0299/0286/0286ContentsIndex.html&amp;StatuteYear=2012&amp;Title=-%3E2012-%3EChapter%20286">Florida’s Sunshine Law</a>, where state government agencies are required to give the public basic access to their meetings and records. This means that most Florida data is open and free for the taking! Data for this project was acquired from the <a href="https://www.fgdl.org/download/index.html" title="Florida Geographic Data Library">FGDL</a>, which hosts what may well be every geographic dataset imaginable from federal and Florida state agencies. For locally maintained datasets, we downloaded data from the <a href="https://geodata-tlcgis.opendata.arcgis.com/">Tallahassee-Leon County GeoData Hub</a>. Initially, we downloaded nearly 20 different datasets to account for practically every obstacle in the viewshed, including FM/AM/Radio/Cellular towers, building footprints, and cadastral data, but after a few trial and error runs we determined that these ancillary datasets weren’t needed. Remember folks: when in doubt, <abbr title="Keep It Simple, Stupid">KISS</abbr>!. In the end, for our Leon County sunrise/sunset suitability analysis we determined that we would only need the following datasets:
-A Leon County boundary dataset to clip our other layers to the area of interest. 
+A Leon County boundary dataset to clip our other layers to the area of interest.
 A Land Use/Land Cover dataset to eliminate any land use areas we deemed unsuitable for viewing a sunrise or sunset situation. I mean, can you even properly watch a sunset in a dense forest?
 The <abbr title="Florida Land Managed Areas">FLMA</abbr> dataset which shows the location of all publicly maintained lands in Florida. This dataset is maintained by <a href="https://www.fnai.org/" title="Florida Natural Areas Inventory">FNAI</a> and will come in handy for identifying the best parks from which to view that giant glowing ball in the sky.
 Elevation data for Leon County in the form of a digital elevation model (DEM), which will be used to identify east- and west-facing slopes. The raster we used has a resolution of 1 arc-second, or approximately 30 meters from north to south.</p>
@@ -124,46 +128,46 @@ Elevation data for Leon County in the form of a digital elevation model (DEM), w
 </tbody>
 </table>
 <h3>DEM Acquisition</h3>
-<p>The USGS connects users with national raster data via their <a href="https://apps.nationalmap.gov/downloader/">National Map Viewer app</a>, but you can download the Leon County data either from our geopackage or from the links provided above. If you have a different study area in mind, or you’re looking for a practice in patience, go to the National Map Viewer app and zoom into your area of interest. On the left-hand menu,  specify <abbr title="3D Elevation Program">3DEP</abbr> 1 arc-second resolution Elevation Products, then click ‘Search Products’. You’ll be able to scroll through the results and preview footprints as well as thumbnails of the images. When you find a raster you’d like to download, you can just click ‘Download ZIP’ (some rasters will have the option ‘Download TIF’ instead) and wait approximately 8 minutes for your shiny new digital elevation model! </p>
-<p><a href="https://github.com/Terra-Modern/SunriseSunset">Geopackage on Github</a> (You’ll need to clone the repository)</p>
-<h3>Computing Environment and Data Processing <br>
-</h3>
+<p>The USGS connects users with national raster data via their <a href="https://apps.nationalmap.gov/downloader/">National Map Viewer app</a>, but you can download the Leon County data either from our geopackage or from the links provided above. If you have a different study area in mind, or you’re looking for a practice in patience, go to the National Map Viewer app and zoom into your area of interest. On the left-hand menu,  specify <abbr title="3D Elevation Program">3DEP</abbr> 1 arc-second resolution Elevation Products, then click ‘Search Products’. You’ll be able to scroll through the results and preview footprints as well as thumbnails of the images. When you find a raster you’d like to download, you can just click ‘Download ZIP’ (some rasters will have the option ‘Download TIF’ instead) and wait approximately 8 minutes for your shiny new digital elevation model!</p>
+<p><a href="https://github.com/Terra-Modern/SunriseSunset">Geopackage on Github</a> (You’ll need to clone the repository.)</p>
+<h3>Computing Environment and Data Processing</h3>
 <p>We’ll be using <a href="https://www.qgis.org/en/site/">QGIS</a>, a free and open source cross-platform desktop geographic information system (GIS) application that supports the viewing, editing, and analysis of geospatial data. You can download it <a href="https://qgis.org/en/site/forusers/download.html">here</a>.
-If you’ve never used QGIS before, <a href="https://www.gislounge.com/free-ways-to-learn-qgis/">this article</a> over at the GIS Lounge lists seven metric tons of free resources to help you get started. </p>
+If you’ve never used QGIS before, <a href="https://www.gislounge.com/free-ways-to-learn-qgis/">this article</a> over at the GIS Lounge lists seven metric tons of free resources to help you get started.</p>
 <p>Once you have QGIS open and ready to go, I recommend adding all your layers to QGIS so you can visually inspect them, as well as do a quick QAQC of the attributes in each layer. Here I’ve added all the vector layers (FLMA, Land Use/Land Cover, and Leon county boundary) to my QGIS project.</p>
 <p><img alt="vector_data" src="../../images/vector_data.jpg"></p>
-<p>Here’s the DEM with the Leon County boundary overlain for reference:  </p>
+<p>Here’s the DEM with the Leon County boundary overlain for reference:</p>
 <p><img alt="leon_dem" src="../../images/leon_dem.png"></p>
 <h3>Pre-Processing</h3>
 <p>Once you’ve confirmed that all your datasets appear to be in working order and that they have the attributes you need, you can proceed to the following data preprocessing steps:</p>
-<h4>Reproject your vector data<br>
-</h4>
+<h4>Reproject your vector data</h4>
 <p>Because we’re situated in beautiful north Florida, are using a DEM with elevations in meters, and are alive after 2011, we decided that the <a href="https://epsg.io/6440" title="EPSG: 6440">NAD83 (2011) / Florida North</a> projection made the most sense to use for our study area.</p>
-<p>I always recommend reprojecting vector data FIRST, before completing any other data preprocessing steps. This can be easily done in QGIS using the ‘Reproject Layer’ tool found in the Vector &gt; Data Management Tools toolbox. After opening the tool, simply add the layer you wish to project and use the Coordinate Reference System Selector to select the target projection (in our case, EPSG:6440). Once you’ve selected your projection, hit ‘OK.’ Make sure the tool will save your reprojected layer to a directory of your choice, then click ‘Run.’ Do this for all your vector layers, then proceed to the next step. </p>
+<p>I always recommend reprojecting vector data FIRST, before completing any other data preprocessing steps. This can be easily done in QGIS using the ‘Reproject Layer’ tool found in the Vector &gt; Data Management Tools toolbox. After opening the tool, simply add the layer you wish to project and use the Coordinate Reference System Selector to select the target projection (in our case, EPSG:6440). Once you’ve selected your projection, hit ‘OK.’ Make sure the tool will save your reprojected layer to a directory of your choice, then click ‘Run.’ Do this for all your vector layers, then proceed to the next step.</p>
 <p><img alt="reproject_vector" src="../../images/reproject_vector.jpg"></p>
-<h4>Clip your vector data<br>
-</h4>
-<p>Now that all your layers are reprojected, we can move on to the next data preprocessing step: clipping each layer to the area of interest represented by the ‘Leon County Boundary’ layer. First, open the ‘Clip’ tool in the Vector &gt; Geoprocessing Tools toolbox and input the layer you want clipped into the ‘Input layer.’ Then add the boundary layer as the ‘Overlay layer’ and save the output ‘Clipped’ dataset to the directory of your choice. Run the tool. Do this for all the layers you wish to include in your site suitability analysis. </p>
+<h4>Clip your vector data</h4>
+<p>Now that all your layers are reprojected, we can move on to the next data preprocessing step: clipping each layer to the area of interest represented by the ‘Leon County Boundary’ layer. First, open the ‘Clip’ tool in the Vector &gt; Geoprocessing Tools toolbox and input the layer you want clipped into the ‘Input layer.’ Then add the boundary layer as the ‘Overlay layer’ and save the output ‘Clipped’ dataset to the directory of your choice. Run the tool. Do this for all the layers you wish to include in your site suitability analysis.</p>
 <p>And ouila! The image below represents all our vector layers reprojected and clipped.</p>
 <p><img alt="all_vector_data" src="../../images/all_vector_data.jpg"></p>
-<h4>Merge rasters<br>
-</h4>
-<p>Since we’re only working with two rasters and they cover a relatively small but contiguous area, my preference is to merge the images before reprojecting or clipping to the extent of the county. Technically speaking, I prefer it this way because I can avoid seam lines between the rasters when they’re reprojected. Lazily speaking, I don’t want to work with two separate files because I don’t want to do the same operations twice. If you’re of the same mindset, start by adding both rasters to your project. Click ‘Raster’ on the toolbar menu across the top of the QGIS screen &gt; ‘Miscellaneous’ &gt; ‘Merge’. In the Merge tool pop-up, clicking the ellipses next to the ‘Input layers’ will open a window where you can select all data that you want to merge. Select both rasters, provide an output location for the new dataset, and click ‘Run’. </p>
-<p>Before merging:<br><img alt="dem_before_after" src="../../images/dem_before_after.png"><br>
-After merging:<br><img alt="dem_before_after" src="../../images/dem_before_after.png"><br></p>
-<p>Points to you if you can spot all five differences between these two images! (Hint: I’m kidding and there are 0 differences.) </p>
+<h4>Merge rasters</h4>
+<p>Since we’re only working with two rasters and they cover a relatively small but contiguous area, my preference is to merge the images before reprojecting or clipping to the extent of the county. Technically speaking, I prefer it this way because I can avoid seam lines between the rasters when they’re reprojected. Lazily speaking, I don’t want to work with two separate files because I don’t want to do the same operations twice. If you’re of the same mindset, start by adding both rasters to your project. Click ‘Raster’ on the toolbar menu across the top of the QGIS screen &gt; ‘Miscellaneous’ &gt; ‘Merge’. In the Merge tool pop-up, clicking the ellipses next to the ‘Input layers’ will open a window where you can select all data that you want to merge. Select both rasters, provide an output location for the new dataset, and click ‘Run’.</p>
+<p>Before merging:</p>
+<p><img alt="dem_before_after" src="../../images/dem_before_after.png"></p>
+<p>After merging:</p>
+<p><img alt="dem_before_after" src="../../images/dem_before_after.png"></p>
+<p>Points to you if you can spot all five differences between these two images! (Hint: I’m kidding and there are 0 differences.)</p>
 <h4>Reproject (“Warp”) raster</h4>
-<p>Now that the raster data is in one cohesive layer, it can be re-projected to NAD83 (2011) / Florida North like the vector data. Unlike vector data, reprojecting raster data requires the “Warp” tool. To access the Warp tool, click ‘Raster’ &gt; ‘Projections’ &gt; ‘Warp (Reproject)’. In the pop-up window, select the raster layer you’d like to reproject from the drop-down menu. Select the “Target CRS”, provide an output location and name, and click ‘Run’. </p>
-<p><img alt="warp_raster" src="../../images/warp_raster.png"><br></p>
-<h4>Clip/Extract raster by mask <br>
-</h4>
+<p>Now that the raster data is in one cohesive layer, it can be re-projected to NAD83 (2011) / Florida North like the vector data. Unlike vector data, reprojecting raster data requires the “Warp” tool. To access the Warp tool, click ‘Raster’ &gt; ‘Projections’ &gt; ‘Warp (Reproject)’. In the pop-up window, select the raster layer you’d like to reproject from the drop-down menu. Select the “Target CRS”, provide an output location and name, and click ‘Run’.</p>
+<p><img alt="warp_raster" src="../../images/warp_raster.png"></p>
+<h4>Clip/Extract raster by mask</h4>
 <p>“Clip by mask” is basically the same as clipping, but for raster data. The “mask” referenced in the tool name is the same Leon County boundary layer that was used to clip the vector data in a previous step. Navigate to the tool by clicking ‘Raster’ &gt; ‘Extraction’ &gt; ‘Clip raster by mask layer’. For ‘Input layer’, select your raster. For ‘Mask layer’, select the Leon County boundary layer. After specifying the output location, click ‘Run’.  The resulting image will probably look something like this:</p>
 <p><img alt="leon_dem2" src="../../images/leon_dem2.png"></p>
-<p>There are ways to remove the black border or make it invisible, but it won’t affect the analysis if it’s left as is.  </p>
-<p>Speaking of... we’re now ready to conduct our analysis for identifying the perfect sunrise or sunset in Leon County. </p>
+<p>There are ways to remove the black border or make it invisible, but it won’t affect the analysis if it’s left as is.</p>
+<p>Speaking of... we’re now ready to conduct our analysis for identifying the perfect sunrise or sunset in Leon County.</p>
 </div>
     </section><aside class="sharing no-print"><a href="#content" aria-label="Post beginning">
        <i class="fa fa-2x fa-fw fa-arrow-circle-up" aria-hidden="true" title="Post beginning"></i>
+    </a>
+    <a href="https://Terra-Modern.github.io/posts/postgis-reading-group/" rel="prev" title="PostGIS Reading Group">
+       <i class="fa fa-2x fa-fw fa-arrow-circle-left" aria-hidden="true" title="Previous post: PostGIS Reading Group"></i>
     </a>
     <span class="post-sharing">
      <a href="http://twitter.com/share?text=Sunrise%2C+Sunset%3A+Part+One&amp;url=https%3A%2F%2FTerra-Modern.github.io%2Fposts%2Fsunrise-sunset-part-one%2F" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" aria-label="Share on Twitter">
@@ -177,6 +181,23 @@ After merging:<br><img alt="dem_before_after" src="../../images/dem_before_after
      </i></a>
      </span>
 </aside><div itemprop="author" itemscope itemtype="http://schema.org/Person">
+<footer class="byline author author-bio vcard"><hr>
+<meta itemprop="image" content="/images/Brittany.jpeg">
+<div class="author-image" style="background: url(../../images/Brittany.jpeg)"></div>
+     <h3 class="byline-name fn" itemprop="name">Dr Brittany Wood
+        <span class="post-sharing">
+            <a href="mailto:geoterramodern@gmail.com?subject=Sunrise,%20Sunset:%20Part%20One" aria-label="Email author">
+            <i class="fa fa-2 fa-fw fa-envelope" aria-hidden="true" title="Email author">
+            </i></a>
+        </span>
+        <span class="post-sharing">
+            <a href="https://github.com/DrBrittany" target="_blank" arial-label="Go to GitHub"> <i class="fab fa-fw fa-github" aria-hidden="true" title="GitHub"></i></a>
+        </span>
+     </h3>
+     <p class="bio">Brittany loves fluffy cats and dancing when no one is watchinghiking, especially in the spring. She is currently reading <em>Bad Monkey</em> by Carl Hiassen.</p>
+     <p><i class="fa fa-map-marker-alt"></i> Tallahassee, FL USA</p>
+</footer>
+</div>
 
 
         <section class="comments hidden-print"><h2>Comments</h2>
@@ -201,13 +222,12 @@ After merging:<br><img alt="dem_before_after" src="../../images/dem_before_after
     <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-        </section><script>var disqus_shortname="terramodern";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2021         <a href="mailto:geoterramodern@gmail.com">Terra Modern</a> - Powered by         <a href="https://getnikola.com" rel="nofollow" target="_blank">Nikola</a>         
+        </section></article><script>var disqus_shortname="terramodern";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2021         <a href="mailto:geoterramodern@gmail.com">Terra Modern</a> - Powered by         <a href="https://getnikola.com" rel="nofollow" target="_blank">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a></p>
             
         </footer>
 </div>
-    </article>
-</div>
+    </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
     
@@ -216,6 +236,5 @@ After merging:<br><img alt="dem_before_after" src="../../images/dem_before_after
     moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates -->
-</div>
 </body>
 </html>
